@@ -1,36 +1,147 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Next Task Manager
 
-## Getting Started
+Um **gerenciador de tarefas simples** construído com **Next.js 13+ (App Router)**, **TypeScript** e **React Context API**.  
+Permite adicionar tarefas, marcar como concluídas com risco no título, editar, excluir e salvar tudo no **sessionStorage** do navegador para persistência entre recarregamentos da página.
 
-First, run the development server:
+---
+
+## 📌 Recursos
+
+✔️ Adicionar novas tarefas  
+✔️ Marcar tarefas como **concluídas** (riscando o título)  
+✔️ Editar tarefas existentes  
+✔️ Deletar tarefas  
+✔️ Persistência no browser através de **sessionStorage**
+
+---
+
+## 🚀 Pré-requisitos
+
+Antes de rodar o projeto, você precisa ter instalado no seu sistema:
+
+- **Node.js** (>= 18)
+- Um gerenciador de pacotes: **npm / yarn / pnpm**
+
+Você pode verificar se o Node está instalado com:
+
+```bash
+node -v
+```
+
+---
+
+## 📦 Instalação
+
+1. Clone o repositório:
+
+```bash
+git clone https://github.com/otaciliow/next-task-manager.git
+```
+
+2. Entre no diretório do projeto:
+
+```bash
+cd next-task-manager
+```
+
+3. Instale as dependências:
+
+```bash
+npm install
+# ou
+yarn
+# ou
+pnpm install
+```
+
+---
+
+## 🧪 Rodando o projeto
+
+Inicie o servidor de desenvolvimento:
 
 ```bash
 npm run dev
-# or
+# ou
 yarn dev
-# or
+# ou
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abra o navegador e acesse:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+A página recarrega automaticamente conforme você edita o código. ([GitHub][1])
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 🧠 Como usar
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 📝 Adicionar tarefa
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Digite o título da tarefa no input e clique em **Adicionar**.
+A tarefa aparecerá listada logo abaixo.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### ✔️ Marcar como concluída
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Clique no botão `✓` ao lado da tarefa.
+O título será exibido com um **riscado** para indicar conclusão.
+
+---
+
+### 🗑️ Excluir tarefa
+
+Clique no botão de lixeira ao lado da tarefa para remover da lista permanentemente.
+
+---
+
+## 🧩 Estrutura do projeto
+
+Aqui estão os arquivos e pastas principais:
+
+```
+.
+├── app/                # App Router / layout da aplicação
+├── components/         # UI: Formulário e Lista de tarefas
+├── hooks/              # Hook para acessar o contexto de tarefas
+├── providers/          # Contexto global de tarefas
+├── types/              # Tipos TypeScript
+├── package.json
+├── next.config.js
+├── tsconfig.json
+└── README.md
+```
+
+---
+
+## 💾 Persistência com `sessionStorage`
+
+As tarefas são armazenadas no `sessionStorage`, ou seja:
+
+✔️ Persistem enquanto a aba estiver aberta
+❌ São perdidas quando a aba é fechada
+
+Essa escolha simplifica o controle sem backend.
+
+---
+
+## 📌 Tecnologias utilizadas
+
+* **Next.js (App Router)** — framework React moderno
+* **TypeScript** — tipagem segura
+* **React Context API** — estado global de tarefas
+* **sessionStorage** — persistência no navegador
+
+---
+
+## 📄 Licença
+
+Esse projeto está aberto para contribuição!
+Sinta-se livre para abrir issues e pull requests.
+
+---
