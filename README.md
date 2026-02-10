@@ -9,7 +9,6 @@ Permite adicionar tarefas, marcar como concluídas com risco no título, editar,
 
 ✔️ Adicionar novas tarefas  
 ✔️ Marcar tarefas como **concluídas** (riscando o título)  
-✔️ Editar tarefas existentes  
 ✔️ Deletar tarefas  
 ✔️ Persistência no browser através de **sessionStorage**
 
