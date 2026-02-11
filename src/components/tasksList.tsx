@@ -20,8 +20,12 @@ export function TasksList() {
                         <li key={task.id} className={`flex justify-between gap-5 w-100 ${task.completed ? 'line-through text-zinc-500' : ''}`}>
                             {task.title}
                             <div className="flex gap-1 items-center">
-                                <SquareCheck className={`cursor-pointer hover:text-green-400 transition-all duration-125 ${task.completed ? 'text-green-500' : ''}`} onClick={() => toggleTask(task.id)} />
-                                <Trash2 className="cursor-pointer hover:text-red-400 transition-all duration-125" onClick={() => deleteTask(task.id)} />
+                                <button className={`cursor-pointer p-1 hover:text-green-400 transition-all duration-125 ${task.completed ? 'text-green-500' : ''}`} onClick={() => toggleTask(task.id)}>
+                                    <SquareCheck />
+                                </button>
+                                <button className="cursor-pointer p-1 hover:text-red-400 transition-all duration-125" onClick={() => deleteTask(task.id)}>
+                                    <Trash2 />
+                                </button>
                             </div>
                         </li>
                     ))}
